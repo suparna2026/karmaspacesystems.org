@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>STEAM Outreach — Karma Space Systems</title>
+<meta name="description" content="Karma Space Systems STEAM outreach programs — bringing space engineering to K-12 classrooms, mentorship, and community partnerships."/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --white: #ffffff; --off-white: #f5f8f7; --surface: #eaf4f1; --surface-blue: #eaf0f8;
+    --teal: #2a9d8f; --teal-light: #d0ede9; --teal-mid: #8ecdc7;
+    --blue: #3a7abf; --blue-light: #d4e6f5;
+    --green: #52b788; --green-light: #d8f0e5; --sage: #74b49b;
+    --ink: #1a2e2b; --ink-mid: #3d5a54; --muted: #6b8f8a;
+    --border: rgba(42,157,143,0.18); --warm: #e9c46a; --orange: #e76f51; --purple: #7b6fa0;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+  .dot-grid { position: fixed; inset: 0; pointer-events: none; z-index: 0; background-image: radial-gradient(circle, rgba(42,157,143,0.1) 1px, transparent 1px); background-size: 28px 28px; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 2.5rem; background: rgba(255,255,255,0.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1rem; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .logo-mark { width: 30px; height: 30px; border: 2px solid var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; animation: spin-slow 20s linear infinite; }
+  @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .logo-mark::before { content: ''; width: 7px; height: 7px; background: var(--teal); border-radius: 50%; position: absolute; top: 2px; left: 50%; transform: translateX(-50%); }
+  .logo-mark::after { content: ''; width: 5px; height: 5px; background: var(--warm); border-radius: 50%; position: absolute; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+  .nav-links a { color: var(--ink-mid); text-decoration: none; font-size: 0.88rem; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-active { color: var(--green) !important; font-weight: 600 !important; }
+  .nav-cta { background: var(--teal) !important; color: white !important; padding: 0.5rem 1.3rem; border-radius: 6px; }
+  .nav-cta:hover { opacity: 0.85; }
+  section { position: relative; z-index: 1; }
+  .section-inner { max-width: 1100px; margin: 0 auto; padding: 5rem 2.5rem; }
+  .section-label { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green); font-weight: 500; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px; }
+  .section-label::before { content: ''; width: 18px; height: 1.5px; background: var(--green); }
+  .section-heading { font-family: 'Inter', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1.2rem; color: var(--ink); }
+  .steam-hero { position: relative; z-index: 1; padding: 9rem 2.5rem 5rem; background: linear-gradient(150deg, #ffffff 0%, #eaf4f1 40%, #f0f5fb 100%); overflow: hidden; }
+  .steam-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 2rem; text-decoration: none; transition: color 0.2s; }
+  .back-link:hover { color: var(--teal); }
+  .steam-hero-text h1 { font-family: 'Inter', sans-serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.1; color: var(--ink); margin-bottom: 1.2rem; letter-spacing: -0.02em; }
+  .steam-hero-text h1 em { font-style: normal; color: var(--green); }
+  .steam-hero-text p { color: var(--muted); line-height: 1.8; font-size: 1rem; margin-bottom: 1.5rem; }
+  .btn-primary { background: var(--teal); color: white; font-family: 'Inter', sans-serif; font-weight: 500; padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-size: 0.95rem; display: inline-block; box-shadow: 0 4px 20px rgba(42,157,143,0.25); transition: opacity 0.2s; }
+  .btn-primary:hover { opacity: 0.88; }
+  .steam-visual { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .steam-tile { aspect-ratio: 1; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em; color: white; }
+  .steam-tile .tile-icon { font-size: 1.6rem; }
+  .steam-tile-s { background: var(--teal); } .steam-tile-t { background: var(--blue); } .steam-tile-e { background: var(--green); }
+  .steam-tile-a { background: var(--orange); grid-column: 1 / 3; aspect-ratio: auto; padding: 1.5rem; }
+  .steam-tile-m { background: var(--purple); }
+  .steam-tile .tile-label { font-size: 0.65rem; opacity: 0.85; letter-spacing: 0.1em; }
+  .steam-pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .pillar-card { border-radius: 14px; padding: 2rem; border: 1px solid; transition: transform 0.3s, box-shadow 0.3s; }
+  .pillar-card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(0,0,0,0.06); }
+  .pillar-card.teal { background: var(--teal-light); border-color: rgba(42,157,143,0.25); }
+  .pillar-card.blue { background: var(--blue-light); border-color: rgba(58,122,191,0.2); }
+  .pillar-card.green { background: var(--green-light); border-color: rgba(82,183,136,0.25); }
+  .pillar-card.orange { background: #fdf0eb; border-color: rgba(231,111,81,0.2); }
+  .pillar-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+  .pillar-card h3 { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--ink); }
+  .pillar-card p { font-size: 0.88rem; color: var(--ink-mid); line-height: 1.65; }
+  .steam-cta-block { margin-top: 4rem; background: linear-gradient(135deg, var(--teal-light), var(--blue-light)); border-radius: 14px; padding: 3rem; text-align: center; border: 1px solid rgba(42,157,143,0.2); }
+  .steam-cta-block h3 { font-family: 'Inter', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--ink); margin-bottom: 0.8rem; }
+  .steam-cta-block p { color: var(--ink-mid); font-size: 0.95rem; max-width: 500px; margin: 0 auto 1.8rem; line-height: 1.7; }
+  .steam-bg-shape { position: absolute; right: -100px; top: -80px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(82,183,136,0.08) 0%, transparent 70%); pointer-events: none; }
+  footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; background: var(--white); }
+  .footer-brand { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--ink-mid); }
+  .footer-tagline { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a { font-size: 0.8rem; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--teal); }
+</style>
+</head>
+<body>
+<div class="dot-grid"></div>
+<nav>
+  <a href="index.html" class="nav-logo"><div class="logo-mark"></div>Karma Space Systems</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="steam.html" class="nav-active">STEAM Outreach</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<section class="steam-hero">
+  <div class="steam-bg-shape"></div>
+  <div class="steam-hero-inner">
+    <div class="steam-hero-text">
+      <a href="index.html" class="back-link">← Back to main site</a>
+      <div class="section-label">Outreach & Education</div>
+      <h1>Inspiring the next<br/>generation of <em>space explorers</em></h1>
+      <p>Our STEAM outreach initiative is a core part of who we are. We believe the next breakthrough in space technology will come from someone who just needs the right opportunity, mentor, or spark of curiosity.</p>
+      <p>From classroom workshops to hands-on engineering challenges, we meet students where they are and show them what's possible.</p>
+      <a href="index.html#contact" class="btn-primary">Get Involved</a>
+    </div>
+    <div class="steam-visual">
+      <div class="steam-tile steam-tile-s"><div class="tile-icon">🔬</div><div>Science</div></div>
+      <div class="steam-tile steam-tile-t"><div class="tile-icon">💻</div><div>Technology</div></div>
+      <div class="steam-tile steam-tile-e"><div class="tile-icon">⚙️</div><div>Engineering</div></div>
+      <div class="steam-tile steam-tile-a"><div class="tile-icon">🎨</div><div>Arts</div><div class="tile-label">creativity & design thinking</div></div>
+      <div class="steam-tile steam-tile-m"><div class="tile-icon">📐</div><div>Math</div></div>
+    </div>
+  </div>
+</section>
+<section style="background:var(--white);">
+  <div class="section-inner">
+    <div class="section-label">Our Programs</div>
+    <h2 class="section-heading">How we show up for students</h2>
+    <p style="color:var(--muted);max-width:560px;line-height:1.7;">We tailor our programs to the audience — from early curiosity builders for K–8, to rigorous engineering challenges for high schoolers and beyond.</p>
+    <div class="steam-pillars">
+      <div class="pillar-card teal"><div class="pillar-icon">🏫</div><h3>Classroom Workshops</h3><p>We bring space engineering into K–12 classrooms through hands-on workshops designed around real mission challenges — building, testing, iterating.</p></div>
+      <div class="pillar-card blue"><div class="pillar-icon">🧑‍🚀</div><h3>Mentorship & Role Models</h3><p>Our engineers volunteer as mentors, sharing career journeys and showing students from all backgrounds that space is for everyone.</p></div>
+      <div class="pillar-card green"><div class="pillar-icon">🚀</div><h3>Engineering Challenges</h3><p>Structured design challenges — satellite design sprints, mission planning exercises, payload competitions — that make systems thinking tangible and fun.</p></div>
+      <div class="pillar-card orange"><div class="pillar-icon">🤝</div><h3>Community Partnerships</h3><p>We collaborate with schools, nonprofits, libraries, and institutions to deliver programming where it's needed most — particularly in underserved communities.</p></div>
+    </div>
+    <div class="steam-cta-block">
+      <h3>Ready to bring space into your classroom?</h3>
+      <p>Whether you're a school, nonprofit, or organization looking for a partner — we'd love to connect and explore what's possible together.</p>
+      <a href="index.html#contact" class="btn-primary">Get in Touch →</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div><div class="footer-brand">Karma Space Systems</div><div class="footer-tagline">karmaspacesystems.org</div></div>
+  <div class="footer-links">
+    <a href="index.html">Main Site</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</footer>
+</body>
+</html>

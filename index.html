@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Karma Space Systems</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swapdisplay=swap" rel="stylesheet"/>
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
@@ -29,7 +29,7 @@
     --purple: #7b6fa0;
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+  body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
   .page { display: none; }
   .page.active { display: block; }
   .dot-grid {
@@ -46,7 +46,7 @@
     border-bottom: 1px solid var(--border);
   }
   .nav-logo {
-    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem;
+    font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1rem;
     color: var(--ink); text-decoration: none;
     display: flex; align-items: center; gap: 10px; cursor: pointer;
   }
@@ -89,7 +89,7 @@
   }
   .section-label::before { content: ''; width: 18px; height: 1.5px; background: var(--teal); }
   .section-heading {
-    font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-family: 'Inter', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     font-weight: 700; line-height: 1.15; letter-spacing: -0.015em;
     margin-bottom: 1.2rem; color: var(--ink);
   }
@@ -131,7 +131,7 @@
   }
   .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1.5px; background: var(--teal); }
   .hero h1 {
-    font-family: 'Syne', sans-serif; font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+    font-family: 'Inter', sans-serif; font-size: clamp(2.6rem, 5.5vw, 4.5rem);
     font-weight: 800; line-height: 1.08; letter-spacing: -0.025em;
     max-width: 680px; margin-bottom: 1.5rem; color: var(--ink);
     animation: fade-up 0.7s 0.1s ease both;
@@ -152,7 +152,7 @@
   .tag-green { background: var(--green-light); color: var(--green); }
   .hero-actions { display: flex; gap: 1rem; align-items: center; animation: fade-up 0.7s 0.3s ease both; }
   .btn-primary {
-    background: var(--teal); color: white; font-family: 'DM Sans', sans-serif;
+    background: var(--teal); color: white; font-family: 'Inter', sans-serif;
     font-weight: 500; padding: 0.85rem 2rem; border-radius: 6px;
     text-decoration: none; font-size: 0.95rem; cursor: pointer; border: none;
     transition: opacity 0.2s, transform 0.15s; display: inline-block;
@@ -160,7 +160,7 @@
   }
   .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
   .btn-ghost {
-    color: var(--ink-mid); font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+    color: var(--ink-mid); font-family: 'Inter', sans-serif; font-size: 0.9rem;
     text-decoration: none; display: flex; align-items: center; gap: 8px;
     padding: 0.85rem 0; transition: color 0.2s; cursor: pointer; background: none; border: none;
   }
@@ -182,19 +182,19 @@
     transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
   }
   .stat-card:hover::before { transform: scaleX(1); }
-  .stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--teal); line-height: 1; margin-bottom: 0.4rem; }
+  .stat-num { font-family: 'Inter', sans-serif; font-size: 2rem; font-weight: 800; color: var(--teal); line-height: 1; margin-bottom: 0.4rem; }
   .stat-label { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
   .steam-teaser {
     background: linear-gradient(135deg, var(--teal-light) 0%, var(--blue-light) 100%);
     border: 1px solid rgba(42,157,143,0.2); border-radius: 14px; padding: 2.2rem;
     margin-top: 4rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem;
   }
-  .steam-teaser h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--ink); }
+  .steam-teaser h3 { font-family: 'Inter', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--ink); }
   .steam-teaser p { color: var(--ink-mid); font-size: 0.9rem; line-height: 1.65; max-width: 480px; margin-bottom: 1.2rem; }
   .btn-teal-outline {
     display: inline-flex; align-items: center; gap: 8px;
     background: white; border: 1.5px solid var(--teal); color: var(--teal);
-    font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 500;
+    font-family: 'Inter', sans-serif; font-size: 0.88rem; font-weight: 500;
     padding: 0.6rem 1.3rem; border-radius: 6px; cursor: pointer; transition: background 0.2s;
   }
   .btn-teal-outline:hover { background: var(--teal-light); }
@@ -202,7 +202,7 @@
   .steam-l {
     width: 36px; height: 36px; border-radius: 8px;
     display: flex; align-items: center; justify-content: center;
-    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.95rem; color: white;
+    font-family: 'Inter', sans-serif; font-weight: 800; font-size: 0.95rem; color: white;
   }
   .steam-l:nth-child(1) { background: var(--teal); }
   .steam-l:nth-child(2) { background: var(--blue); }
@@ -221,7 +221,7 @@
     border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
   }
   .service-card:nth-child(even) .service-icon { background: var(--surface-blue); }
-  .service-card h3 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.7rem; color: var(--ink); }
+  .service-card h3 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.7rem; color: var(--ink); }
   .service-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
   .contact { background: var(--off-white); }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
@@ -243,13 +243,13 @@
   .form-field input, .form-field textarea, .form-field select {
     background: var(--off-white); border: 1px solid rgba(42,157,143,0.2);
     border-radius: 6px; padding: 0.72rem 1rem; color: var(--ink);
-    font-family: 'DM Sans', sans-serif; font-size: 0.93rem; outline: none; transition: border-color 0.2s;
+    font-family: 'Inter', sans-serif; font-size: 0.93rem; outline: none; transition: border-color 0.2s;
   }
   .form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-color: var(--teal); }
   .form-field textarea { resize: vertical; min-height: 110px; }
   .form-submit {
     background: var(--teal); color: white; border: none; border-radius: 6px;
-    padding: 0.85rem 2rem; font-family: 'DM Sans', sans-serif; font-size: 0.93rem; font-weight: 500;
+    padding: 0.85rem 2rem; font-family: 'Inter', sans-serif; font-size: 0.93rem; font-weight: 500;
     cursor: pointer; transition: opacity 0.2s, transform 0.15s; align-self: flex-start;
     box-shadow: 0 4px 16px rgba(42,157,143,0.25);
   }
@@ -259,7 +259,7 @@
     padding: 2rem 4rem; display: flex; align-items: center; justify-content: space-between;
     background: var(--white);
   }
-  .footer-brand { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--ink-mid); }
+  .footer-brand { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--ink-mid); }
   .footer-tagline { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
   .footer-links { display: flex; gap: 2rem; }
   .footer-links a { font-size: 0.8rem; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; cursor: pointer; }
@@ -273,19 +273,19 @@
     display: inline-flex; align-items: center; gap: 6px;
     font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--muted); margin-bottom: 2rem; cursor: pointer;
-    background: none; border: none; font-family: 'DM Sans', sans-serif; transition: color 0.2s;
+    background: none; border: none; font-family: 'Inter', sans-serif; transition: color 0.2s;
   }
   .steam-hero-text .back-link:hover { color: var(--teal); }
   .steam-page-label { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green); font-weight: 500; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px; }
   .steam-page-label::before { content: ''; width: 18px; height: 1.5px; background: var(--green); }
-  .steam-hero-text h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.1; color: var(--ink); margin-bottom: 1.2rem; letter-spacing: -0.02em; }
+  .steam-hero-text h1 { font-family: 'Inter', sans-serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.1; color: var(--ink); margin-bottom: 1.2rem; letter-spacing: -0.02em; }
   .steam-hero-text h1 em { font-style: normal; color: var(--green); }
   .steam-hero-text p { color: var(--muted); line-height: 1.8; font-size: 1rem; margin-bottom: 1.5rem; }
   .steam-visual { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .steam-tile {
     aspect-ratio: 1; border-radius: 12px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 8px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.8rem;
+    gap: 8px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.8rem;
     letter-spacing: 0.04em; color: white;
   }
   .steam-tile .tile-icon { font-size: 1.6rem; }
@@ -304,13 +304,13 @@
   .pillar-card.green { background: var(--green-light); border-color: rgba(82,183,136,0.25); }
   .pillar-card.orange { background: #fdf0eb; border-color: rgba(231,111,81,0.2); }
   .pillar-icon { font-size: 1.8rem; margin-bottom: 1rem; }
-  .pillar-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--ink); }
+  .pillar-card h3 { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--ink); }
   .pillar-card p { font-size: 0.88rem; color: var(--ink-mid); line-height: 1.65; }
   .steam-cta-block {
     margin-top: 4rem; background: linear-gradient(135deg, var(--teal-light), var(--blue-light));
     border-radius: 14px; padding: 3rem; text-align: center; border: 1px solid rgba(42,157,143,0.2);
   }
-  .steam-cta-block h3 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--ink); margin-bottom: 0.8rem; }
+  .steam-cta-block h3 { font-family: 'Inter', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--ink); margin-bottom: 0.8rem; }
   .steam-cta-block p { color: var(--ink-mid); font-size: 0.95rem; max-width: 500px; margin: 0 auto 1.8rem; line-height: 1.7; }
   .steam-bg-shape {
     position: absolute; right: -100px; top: -80px; width: 400px; height: 400px;
